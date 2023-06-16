@@ -1,0 +1,44 @@
+[
+  {
+    "objectID": "posts/new_sst_post/oisst_in_pythonr.html#why-r-python",
+    "href": "posts/new_sst_post/oisst_in_pythonr.html#why-r-python",
+    "title": "OISST Access in Python & R",
+    "section": "Why R & python",
+    "text": "Why R & python\nI believe its important both to use the tools that best suit your interests and skills. However; I also believe it is important to be aware of what other avenues might exist. This workflow takes advantage of an environmental data distribution tool known as ERDDAP. This framework has API’s that interface with both python & R and I wanted to highlight how similar these interfaces R for researchers who might be looking for an example to show the paralells across the two languages.\n\nAccessing SST ovia ERDDAP\nIn this demo we will be using a data product made available by NOAA known as Optimally Interpolated Sea Surface Temperature or OISST. This resource contains global sea surface temperatures dating back to September of 1981.\n\nERDDAP Access Tools\nThe two main steps to accessing SST data, and other resources on ERDDAP are: 1. Locating the ERDDAP server and data resource 2. Using an api tool like rerddap or erdappy to generate URL’s for ERDDAP\n\n\n\n\n\n\n \n\n\n\n\n\n\n\nA work by Adam A. Kemberling\nAkemberling@gmri.org"
+  },
+  {
+    "objectID": "posts/welcome/welcome_post.html",
+    "href": "posts/welcome/welcome_post.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "This is my first blog post ever. Welcome!\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts.\nSince this is my first post, this is also not going to be too involved…"
+  },
+  {
+    "objectID": "posts/welcome/welcome_post.html#why-am-i-doing-this",
+    "href": "posts/welcome/welcome_post.html#why-am-i-doing-this",
+    "title": "Welcome To My Blog",
+    "section": "Why am I doing this?",
+    "text": "Why am I doing this?\nI’ve learned a ton about R and python from my peers. I see this as an opportunity to give back to the open-source community that has shaped my career.\n\n\n\n\n\n\n \n\n\n\n\n\n\n\nA work by Adam A. Kemberling\nAkemberling@gmri.org"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Adam A. Kemberling",
+    "section": "",
+    "text": "About me:\nI am a data scientist and marine researcher located in Portland, ME. My work currently centers on ecological responses to ocean warming, and I’ve been studying these responses through multi-species studies of both plankton and fish communities of the Northeastern US. I also lead the Gulf of Maine Warming Reports, including management of their remote-sensing data pipelines, as an effort to raise awareness through science communication.\nI am an open science advocate, and I enjoy participating in projects where code-sharing and collaboration is encouraged. I am always looking to learn and collaborate with others. For those looking to connect you can reach me and find my work on github.\nCheers!"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About the Site",
+    "section": "",
+    "text": "Why am I doing this?\nThis site is for sharing my professional portfolio in a more detailed way, as well as for sharing some of the research and programming tricks that I’ve found useful in my career. I plan to share quick tutorials on ocean warming and marine ecology workflows, interspersed between pictures of my dog and my scattered thoughts about a career studying climate change.\nMy hope is that through these posts I can help early researchers find tips for some common workflow challenges, and raise awareness of how modern research and data science intersect. Learning to program in R/python has been an empowering experience for me, and allowed me to make things that I can be proud of, and tackle challenges I otherwise would have shyed away from .In the open-source spirit I wish to give back to the community so that others can share that experience… But also dog pictures too."
+  },
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Gulf of Maine Warming Blog Series",
+    "section": "",
+    "text": "OISST Access in Python & R\n\n\n\n\n\n\n\nremote sensing\n\n\nSea surface temperatures\n\n\npython\n\n\nr\n\n\n\n\nThis is my first blog post, showing how to access SST data globally in R & python.\n\n\n\n\n\n\nAug 24, 2022\n\n\nAdam A. Kemberling\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nhello world\n\n\n\n\n\n\n\n\n\n\n\nAug 23, 2022\n\n\nAdam A. Kemberling\n\n\n\n\n\n\nNo matching items"
+  }
+]

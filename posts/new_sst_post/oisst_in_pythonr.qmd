@@ -1,0 +1,43 @@
+---
+title: "OISST Access in Python & R"
+author: "Adam A. Kemberling"
+date: "2022-08-24"
+categories: ['remote sensing', 'Sea surface temperatures', 'python', 'r']
+description: 'This is my first blog post, showing how to access SST data globally in R & python.'
+execute: 
+  message: false
+  warning: false
+  echo: true
+  fig.align: "center"
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r}
+#| echo: false
+library(gmRi)
+gmRi::use_gmri_style_rmd(css_file = "gmri_rmarkdown.css")
+
+```
+
+# SST Access via ERDDAP in python & R
+
+Much of the work I've done involves relating marine species to their preferred environments. One of the aspects of the environment I've studied the most
+
+## Why R & python
+
+I believe its important both to use the tools that best suit your interests and skills. However; I also believe it is important to be aware of what other avenues might exist. This workflow takes advantage of an environmental data distribution tool known as ERDDAP. This framework has API's that interface with both python & R and I wanted to highlight how similar these interfaces R for researchers who might be looking for an example to show the paralells across the two languages.
+
+### Accessing SST ovia ERDDAP
+
+In this demo we will be using a data product made available by NOAA known as Optimally Interpolated Sea Surface Temperature or OISST. This resource contains global sea surface temperatures dating back to September of 1981.
+
+#### ERDDAP Access Tools
+
+The two main steps to accessing SST data, and other resources on ERDDAP are: 1. Locating the ERDDAP server and data resource 2. Using an api tool like [rerddap](https://github.com/ropensci/rerddap) or [erdappy](https://github.com/ioos/erddapy) to generate URL's for ERDDAP
+
+```{r}
+#| echo: false
+gmRi::insert_gmri_footer("akemberling_gmri_footer.html")
+
+```

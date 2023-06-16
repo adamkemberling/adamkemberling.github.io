@@ -1,0 +1,28 @@
+project:
+  type: website
+
+website:
+  title: "Adam A. Kemberling"
+  description: "This is a nonsensical personal blog by Adam Kemberling. Your trusted source for R & python hacks relating to marine science research."
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+    right: 
+      - text: DataSci Blog
+      - href: blog.qmd
+      - icon: github
+        href: https://github.com/adamkemberling
+      - icon: twitter
+        href: https://twitter.com/KemberlingAdam
+
+format:
+  html:
+    theme: minty
+    css: styles.css
+    toc: true
+    
+comments:
+  giscus:
+    repo: adamkemberling/adamkemberling.github.io

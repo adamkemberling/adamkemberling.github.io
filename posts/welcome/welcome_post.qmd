@@ -1,0 +1,32 @@
+---
+title: "Welcome To My Blog"
+author: "Adam A. Kemberling"
+date: "2022-08-23"
+categories: [hello world]
+---
+
+```{r}
+#| echo: false
+library(gmRi)
+gmRi::use_gmri_style_rmd(css_file = "gmri_rmarkdown.css")
+
+```
+
+This is my first blog post ever. Welcome!
+
+![](thumbnail.jpg)
+
+Since this post doesn't specify an explicit `image`, the first image in the post will be used in the listing page of posts.
+
+Since this is my first post, this is also not going to be too involved...
+
+## Why am I doing this?
+
+I've learned a ton about R and python from my peers. I see this as an opportunity to give back to the open-source community that has shaped my career.
+
+```{r}
+#| echo: false
+
+gmRi::insert_gmri_footer("akemberling_gmri_footer.html")
+
+```
