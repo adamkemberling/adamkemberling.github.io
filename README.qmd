@@ -1,6 +1,6 @@
 ---
 title: "Adam A. Kemberling"
-format: html
+format: gfm
 ---
 
 # About:
