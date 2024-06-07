@@ -1,0 +1,101 @@
+---
+title: "My Research Journey"
+author: "Adam A. Kemberling"
+date: "2024-06-07"
+
+categories: ['GIS', 'Hello-World', 'r']
+description: 'This is a brief mapping-related blog post, showing how to map out my research career journey.'
+execute: 
+  message: false
+  warning: false
+  echo: true
+  fig.align: "center"
+---
+
+
+
+```{r}
+
+library(tidyverse)
+library(sf)
+library(gmRi)
+
+
+# Following along here
+# https://www.findingyourway.io/blog/2018/02/28/2018-02-28_great-circles-with-sf-and-leaflet/
+
+
+raw_journey_data <- tribble(
+  ~start.long, ~start.lat, ~end.long, ~end.lat, ~name,
+       
+  -76.478645, 39.604256, -77.878035, 34.226766, "Jarrettsville to Wilmington",
+  -77.878035, 34.226766, -83.527100, 10.593577, "Wilmington to Costa Rica",
+  -83.527100, 10.593577, -90.801365, 29.795008, "Costa Rica to Thibodaux",
+  -90.801365, 29.795008, -88.797574, 30.393609, "Thibodaux to Ocean Springs",
+  -88.797574, 30.393609, -88.561524, 30.365844, "Ocean Springs to Pascagoula",
+  -88.561524, 30.365844, -70.255992, 43.651484, "Pascagoula to Portland",
+)
+
+# Change to sf
+start_locs <- raw_journey_data %>%
+  select(
+    start.long,
+    start.lat
+  ) %>%
+  setNames(c("long", "lat")) %>%
+  mutate(journey_id = row_number())
+
+end_locs <- raw_journey_data %>%
+  select(
+    end.long,
+    end.lat
+  ) %>%
+  setNames(c("long", "lat")) %>%
+  mutate(journey_id = row_number())
+
+# Make linestrings from the start/end coordinates
+journey_data_linestrings <- start_locs %>%
+  bind_rows(end_locs) %>%
+  st_as_sf(coords = c("long", "lat")) %>%
+  group_by(journey_id) %>%
+  arrange(journey_id) %>%
+  summarise() %>%
+  st_cast("LINESTRING")
+
+journey_data_linestrings <- st_set_crs(journey_data_linestrings, st_crs(4326))
+
+journey_data <- raw_journey_data
+st_geometry(journey_data) <- st_geometry(journey_data_linestrings)
+
+
+
+# Convert linestrings to matrices, then lists
+list_of_linestrings <- raw_journey_data %>%
+  select(-name) %>%
+  transpose() %>%
+  map(~ matrix(flatten_dbl(.), nrow = 2, byrow = TRUE)) %>%
+  map(st_linestring)
+
+
+# collect the features
+collection_sf <- list_of_linestrings %>%
+  st_sfc(crs = 4326) %>%
+  st_sf(geometry = .) 
+
+# Bind to the raw
+collection_sf <- collection_sf %>% 
+  bind_cols(raw_journey_data) %>%
+  st_segmentize(units::set_units(50, km)) 
+
+
+library(rnaturalearth)
+world_sf <- ne_countries("medium", returnclass = "sf")
+
+# Map
+ggplot() + 
+  geom_sf(data = world_sf) +
+  geom_sf(data = collection_sf, aes(color = name),
+          linewidth = 1) +
+  coord_sf(xlim = c(-95, -65), ylim = c(10, 45))
+```
+
