@@ -2,6 +2,7 @@
   {
     "listing": "/blog.html",
     "items": [
+      "/posts/research_portfolio/research_journey_map.html",
       "/posts/new_sst_post/oisst_in_pythonr.html",
       "/posts/welcome/welcome_post.html"
     ]

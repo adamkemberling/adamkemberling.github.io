@@ -7,9 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Adam A. Kemberling">
-<meta name="dcterms.date" content="2022-08-23">
+<meta name="dcterms.date" content="2024-06-07">
+<meta name="description" content="This is a brief mapping-related blog post, showing how to map out my research career journey.">
 
-<title>Welcome To My Blog – Adam A. Kemberling</title>
+<title>My Research Journey – Adam A. Kemberling</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,6 +22,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -130,9 +165,16 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Welcome To My Blog</h1>
-                                <div class="quarto-categories">
-                <div class="quarto-category">hello world</div>
+      <h1 class="title">My Research Journey</h1>
+                  <div>
+        <div class="description">
+          This is a brief mapping-related blog post, showing how to map out my research career journey.
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">GIS</div>
+                <div class="quarto-category">Hello-World</div>
+                <div class="quarto-category">r</div>
               </div>
                   </div>
   </div>
@@ -150,7 +192,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">August 23, 2022</p>
+        <p class="date">June 7, 2024</p>
       </div>
     </div>
     
@@ -161,14 +203,8 @@ ul.task-list li input[type="checkbox"] {
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#why-am-i-doing-this" id="toc-why-am-i-doing-this" class="nav-link active" data-scroll-target="#why-am-i-doing-this">Why am I doing this?</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -178,243 +214,97 @@ ul.task-list li input[type="checkbox"] {
 
 
 <div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gmRi)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Following along here</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># https://www.findingyourway.io/blog/2018/02/28/2018-02-28_great-circles-with-sf-and-leaflet/</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>raw_journey_data <span class="ot">&lt;-</span> <span class="fu">tribble</span>(</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="sc">~</span>start.long, <span class="sc">~</span>start.lat, <span class="sc">~</span>end.long, <span class="sc">~</span>end.lat, <span class="sc">~</span>name,</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>       </span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="sc">-</span><span class="fl">76.478645</span>, <span class="fl">39.604256</span>, <span class="sc">-</span><span class="fl">77.878035</span>, <span class="fl">34.226766</span>, <span class="st">"Jarrettsville to Wilmington"</span>,</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="sc">-</span><span class="fl">77.878035</span>, <span class="fl">34.226766</span>, <span class="sc">-</span><span class="fl">83.527100</span>, <span class="fl">10.593577</span>, <span class="st">"Wilmington to Costa Rica"</span>,</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="sc">-</span><span class="fl">83.527100</span>, <span class="fl">10.593577</span>, <span class="sc">-</span><span class="fl">90.801365</span>, <span class="fl">29.795008</span>, <span class="st">"Costa Rica to Thibodaux"</span>,</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  <span class="sc">-</span><span class="fl">90.801365</span>, <span class="fl">29.795008</span>, <span class="sc">-</span><span class="fl">88.797574</span>, <span class="fl">30.393609</span>, <span class="st">"Thibodaux to Ocean Springs"</span>,</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  <span class="sc">-</span><span class="fl">88.797574</span>, <span class="fl">30.393609</span>, <span class="sc">-</span><span class="fl">88.561524</span>, <span class="fl">30.365844</span>, <span class="st">"Ocean Springs to Pascagoula"</span>,</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  <span class="sc">-</span><span class="fl">88.561524</span>, <span class="fl">30.365844</span>, <span class="sc">-</span><span class="fl">70.255992</span>, <span class="fl">43.651484</span>, <span class="st">"Pascagoula to Portland"</span>,</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Change to sf</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>start_locs <span class="ot">&lt;-</span> raw_journey_data <span class="sc">%&gt;%</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    start.long,</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    start.lat</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">setNames</span>(<span class="fu">c</span>(<span class="st">"long"</span>, <span class="st">"lat"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">journey_id =</span> <span class="fu">row_number</span>())</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>end_locs <span class="ot">&lt;-</span> raw_journey_data <span class="sc">%&gt;%</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>    end.long,</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>    end.lat</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>  <span class="fu">setNames</span>(<span class="fu">c</span>(<span class="st">"long"</span>, <span class="st">"lat"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">journey_id =</span> <span class="fu">row_number</span>())</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="co"># Make linestrings from the start/end coordinates</span></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>journey_data_linestrings <span class="ot">&lt;-</span> start_locs <span class="sc">%&gt;%</span></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>  <span class="fu">bind_rows</span>(end_locs) <span class="sc">%&gt;%</span></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_as_sf</span>(<span class="at">coords =</span> <span class="fu">c</span>(<span class="st">"long"</span>, <span class="st">"lat"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(journey_id) <span class="sc">%&gt;%</span></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(journey_id) <span class="sc">%&gt;%</span></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_cast</span>(<span class="st">"LINESTRING"</span>)</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>journey_data_linestrings <span class="ot">&lt;-</span> <span class="fu">st_set_crs</span>(journey_data_linestrings, <span class="fu">st_crs</span>(<span class="dv">4326</span>))</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>journey_data <span class="ot">&lt;-</span> raw_journey_data</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="fu">st_geometry</span>(journey_data) <span class="ot">&lt;-</span> <span class="fu">st_geometry</span>(journey_data_linestrings)</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert linestrings to matrices, then lists</span></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>list_of_linestrings <span class="ot">&lt;-</span> raw_journey_data <span class="sc">%&gt;%</span></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>name) <span class="sc">%&gt;%</span></span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>  <span class="fu">transpose</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>  <span class="fu">map</span>(<span class="sc">~</span> <span class="fu">matrix</span>(<span class="fu">flatten_dbl</span>(.), <span class="at">nrow =</span> <span class="dv">2</span>, <span class="at">byrow =</span> <span class="cn">TRUE</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>  <span class="fu">map</span>(st_linestring)</span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a><span class="co"># collect the features</span></span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>collection_sf <span class="ot">&lt;-</span> list_of_linestrings <span class="sc">%&gt;%</span></span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_sfc</span>(<span class="at">crs =</span> <span class="dv">4326</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_sf</span>(<span class="at">geometry =</span> .) </span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a><span class="co"># Bind to the raw</span></span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a>collection_sf <span class="ot">&lt;-</span> collection_sf <span class="sc">%&gt;%</span> </span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a>  <span class="fu">bind_cols</span>(raw_journey_data) <span class="sc">%&gt;%</span></span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_segmentize</span>(units<span class="sc">::</span><span class="fu">set_units</span>(<span class="dv">50</span>, km)) </span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rnaturalearth)</span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a>world_sf <span class="ot">&lt;-</span> <span class="fu">ne_countries</span>(<span class="st">"medium"</span>, <span class="at">returnclass =</span> <span class="st">"sf"</span>)</span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a><span class="co"># Map</span></span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span> </span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> world_sf) <span class="sc">+</span></span>
+<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> collection_sf, <span class="fu">aes</span>(<span class="at">color =</span> name),</span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a>          <span class="at">linewidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_sf</span>(<span class="at">xlim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">95</span>, <span class="sc">-</span><span class="dv">65</span>), <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">10</span>, <span class="dv">45</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<style type="text/css">/********** GMRI Rmarkdown Core Style Sheet - Do Not Modify!!! **********/
-
-
-/********** Begin Style Sheet **********/
-
-/* Avenir Font from Fonts.com for GMRI Branding */
-
-@import url("http://fast.fonts.net/t/1.css?apiType=css&projectid=806f61f6-d695-4965-a878-820b50bc0269");
-    @font-face{
-        font-family:"Avenir LT W01_35 Light1475496";
-        src:url("Fonts/0078f486-8e52-42c0-ad81-3c8d3d43f48e.woff2") format("woff2"),url("Fonts/908c4810-64db-4b46-bb8e-823eb41f68c0.woff") format("woff");
-    }
-    @font-face{
-        font-family:"Avenir LT W01_35 Light_1475502";
-        src:url("Fonts/a59168c1-917d-4de9-a244-0316c057c357.woff2") format("woff2"),url("Fonts/6dc0e7d8-9284-44e1-8f05-984a41daa3a4.woff") format("woff");
-    }
-    @font-face{
-        font-family:"Avenir LT W01_45 Book1475508";
-        src:url("Fonts/065a6b14-b2cc-446e-9428-271c570df0d9.woff2") format("woff2"),url("Fonts/65d75eb0-2601-4da5-a9a4-9ee67a470a59.woff") format("woff");
-    }
-    @font-face{
-        font-family:"Avenir LT W01_45 Book O1475514";
-        src:url("Fonts/476612d9-282d-4f76-95cd-b4dd31e7ed21.woff2") format("woff2"),url("Fonts/f1ebae2b-5296-4244-8771-5f40e60a564a.woff") format("woff");
-    }
-    @font-face{
-        font-family:"Avenir LT W01_55 Roman1475520";
-        src:url("Fonts/b290e775-e0f9-4980-914b-a4c32a5e3e36.woff2") format("woff2"),url("Fonts/4b978f72-bb48-46c3-909a-2a8cd2f8819c.woff") format("woff");
-    }
-    @font-face{
-        font-family:"Avenir LT W01_55 Obliqu1475526";
-        src:url("Fonts/1a7173fa-062b-49ad-9915-bc57d3bfc1f5.woff2") format("woff2"),url("Fonts/cdda031e-26e9-4269-83d1-5a218caa10db.woff") format("woff");
-    }
-    @font-face{
-        font-family:"Avenir LT W01_65 Medium1475532";
-        src:url("Fonts/17b90ef5-b63f-457b-a981-503bb7afe3c0.woff2") format("woff2"),url("Fonts/c9aeeabd-dd65-491d-b4be-3e0db9ae47a0.woff") format("woff");
-    }
-    @font-face{
-        font-family:"Avenir LT W01_65 Medium1475538";
-        src:url("Fonts/deb5e718-7abb-4df3-9365-edfa95317090.woff2") format("woff2"),url("Fonts/04801919-17ee-4c6b-8b17-eb1965cb3ed6.woff") format("woff");
-    }
-    @font-face{
-        font-family:"Avenir LT W01_85 Heavy1475544";
-        src:url("Fonts/d513e15e-8f35-4129-ad05-481815e52625.woff2") format("woff2"),url("Fonts/61bd362e-7162-46bd-b67e-28f366c4afbe.woff") format("woff");
-    }
-    @font-face{
-        font-family:"Avenir LT W01_85 Heavy_1475550";
-        src:url("Fonts/3c210c80-960f-4684-850b-25390b4d08af.woff2") format("woff2"),url("Fonts/cb5c71ad-e582-4d00-929c-67fbfaeb1c27.woff") format("woff");
-    }
-    @font-face{
-        font-family:"Avenir LT W01_95 Black1475556";
-        src:url("Fonts/c78eb7af-a1c8-4892-974b-52379646fef4.woff2") format("woff2"),url("Fonts/75b36c58-2a02-4057-a537-09af0832ae46.woff") format("woff");
-    }
-    @font-face{
-        font-family:"Avenir LT W01_95 Black_1475562";
-        src:url("Fonts/a2477e08-09d9-4d4b-97a9-23a1e22cb44c.woff2") format("woff2"),url("Fonts/19d12bba-92b1-43ad-9bab-cd36a4195c2a.woff") format("woff");
-    }
-
-
-
-
-
-/* PRE-Avenir Fonts: Lato + Raleway font import from google fonts */
-@import url('https://fonts.googleapis.com/css?family=Lato');
-@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
-
-/* add font families as needed: font-family: 'Lato', sans-serif; */
-
-
-/* Level 1 Headers */
-h1 { text-align: left;
-     margin: 10px 0 15px 0;
-     margin-top: 40px;
-     font-size: 38px;
-     font-family: Avenir;
-}
-
-
-/* Headers 2 - 6 */
-h2, h3, h4, h5, h6 {
-    color: #333333;
-    margin: 20px 0 5px 0;
-    text-align: left;
-    font-family: Avenir;}
-
-
-/* Sizing/font For Each Header Type */
-h2, .h2 { font-size: 24px; margin-top: 40px;}
-h3, .h3 { font-size: 20px; margin-top: 40px;}
-h4, .h4 { font-size: 18px;}
-h5 { font-size: 16px; margin-top: 40px;font-weight: normal; color: #3069aa; text-decoration: underline;}
-h6 { font-size: 14px; margin-top: 40px;font-weight: normal; color: #3069aa; }
-
-
-/* Paragraph Text */
-p, ol { margin-top: 10px;
-    font-family: 'Raleway', sans-serif;}
-
-/* Figure & Table Captions */
-figure, figcaption, .figure-caption {font-size: 12px; color: #5a6570}
-caption {font-size: 12px; color: #5a6570}
-
-
-/* Title Author and Date Headers */
-h1.title.toc-ignore {margin-top: 10px;}
-h4.author, h4.date {
-    color: rgb(0,115,109);
-    margin-top: 0;
-    margin-bottom: 5px;
-    font-size: 12px;}
-
-
-
-/* Links */
-a {
-    color: rgb(234,79,18)
-}
-
-
-/***********************************************/
-
-
-/********  Table of Contents  **********/
-
-/* Highlighted TOC Element */
-.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
-    z-index: 2;
-    color: #fff;
-    background-color: rgb(0,96,138);
-    border-color: rgb(0,96,138);
-}
-
-/* Default TOC Elements */
-.list-group-item, .list-group-item:focus, .list-group-item:hover {
-    z-index: 2;
-    color: rgb(0,96,138);
-    background-color: #fff;
-    border-color: rgb(0,96,138);
-}
-
-
-/********  Tab Panels  **********/
-
-/* Navigation Tabs - Highlighted Tabset Pills */
-.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
-    color: #fff;
-    background-color: rgb(0,115,109) ;
-    }
-
-/* Navigation Tabs - Default Tabset Pills */
-.nav-pills > li > a, .nav-pills > li > a:hover, .nav-pills > li > a:focus {
-    color: rgb(0,115,109);
-    background-color: #fff;
-    }
-
-
-/* Second Level Tabs - Active */
-.nav-tabs > li.active  > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
-    color: #fff;
-    background-color: rgb(83,83,83) ;
-    }
-
-/* Second Level Tabs - Inactive */
-.nav-tabs > li  > a, .nav-tabs > li > a:hover, .nav-tabs > li > a:focus {
-    color: rgb(83,83,83);
-    background-color: #fff;
-    }
-
-
-
-/********** End Core Style Sheet **********/
-
-
-
-</style>
+<div>
+<figure class="figure">
+<p><img src="research_journey_map_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
 </div>
-</div>
-<p>This is my first blog post ever. Welcome!</p>
-<p><img src="thumbnail.jpg" class="img-fluid"></p>
-<p>Since this post doesn’t specify an explicit <code>image</code>, the first image in the post will be used in the listing page of posts.</p>
-<p>Since this is my first post, this is also not going to be too involved…</p>
-<section id="why-am-i-doing-this" class="level2">
-<h2 class="anchored" data-anchor-id="why-am-i-doing-this">Why am I doing this?</h2>
-<p>I’ve learned a ton about R and python from my peers. I see this as an opportunity to give back to the open-source community that has shaped my career.</p>
-<div class="cell">
-<div class="cell-output-display">
-
-<!---- Rmarkdown Custom Footer for Author Details - Modify personal info as needed ------>
-
-<!---- Custom Footer ------->
-&nbsp;
-
-<!---- Add GMRI Logo to footer ---->
-
-<!--
-<p style="text-align: center;">
-    <img src="presentations/gmri_logo.png" alt="GMRI Logo" height="91" width="248">
-</p>
--->
-
-<!---- Author Details  ------>
-<hr>
-<p style="text-align: center; font-size: 60%; padding: 0px;">A work by <a href="https://github.com/adamkemberling/">Adam A. Kemberling</a></p>
-<p style="text-align: center; font-size: 60%; padding: 0px;"><span style="color: #808080;"><em>Akemberling@gmri.org</em></span></p>
-
-
-
-
-
-<!-- Add Font-Awesome Icon Library -->
-<!--
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
--->
-
-<!-- Add Icons with Personal Links -->
-<!--
-
-<p style="text-align: center;">
-    <a href="https://twitter.com/r_graph_gallery?lang=en" class="fa fa-twitter"></a>
-    <a href="https://www.linkedin.com/in/yan-holtz-2477534a/" class="fa fa-linkedin"></a>
-    <a href="https://github.com/holtzy/" class="fa fa-github"></a>
-</p>
-
--->
-
-&nbsp;
-
-<!--- End Custom Footer --->
-
-
 </div>
 </div>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

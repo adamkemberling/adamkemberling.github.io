@@ -16,11 +16,42 @@ about:
       href: https://github.com/adamkemberling
 ---
 
-**About me:**
+### Welcome!
 
-I am a data scientist and marine researcher located in Portland, ME. My work currently centers on ecological responses to ocean warming, and I've been studying these responses through multi-species studies of both plankton and fish communities of the Northeastern US. I also lead the [Gulf of Maine Warming Reports](https://www.gmri.org/stories/warming-22/), including management of their [remote-sensing data pipelines](www.github.com/adamkemberling/oisst_mainstays). These are efforts to raise awareness of cliamte change related impacts on the ocean environment through science communication.
+Thank you for taking the time to visit my personal site!
 
-I am an open science advocate, and I enjoy participating in projects where code-sharing and collaboration is encouraged. I am always looking to learn and collaborate with others and get involved with initiatives for social good. For those looking to connect you can reach me and find my work on [github](https://www.github.com/adamkemberling).
+This site is a means for me to share some of the projects that have been impactful to my development as a professional data-scientist and as a person.
 
+I am a data scientist and marine ecology researcher located in Portland, ME where I work as a researcher studying topics in Marine Ecology. Over my short career I have had the great fortune to work with some dynamic research teams, and across a range of beautifuly complex habitats and interesting research topics.
+
+I hope to share some of the most interesting lessons, tips and tricks, and challenges I've encountered along the way.
 
 Cheers!
+
+## **Recent Focus:** Ecological Responses to Ocean Warming
+
+My research in New England has centered on how marine species and their ecological communities are responding to rapid ocean warming. Due in-part to shifts in major adjacent ocean currents, sea surface temperatures along the Northeast US & Nova Scotian continental shelf have been warming faster than most locations on Earth. This rapid-warming has attracted the attention of researchers like myself, who wish to increase the understanding of how ecosystems respond to a changing environment.
+
+### Major Themes:
+
+In my role as a research associate, I've been closely involved in a number of research projects studying single-species and multi-species ecological community responses to ocean warming, and following changes along a number of dimensions.
+
+-   **Changing community structure:** Has the network of familiar species changed?
+-   **Changing population dynamics:** Are populations increasing/decreasing?
+-   **Changing population size structure:** Are we seeing smaller individuals of this species?
+-   **Projected climate change impacts:** What do different Shared Socio-Economic Pathways Project for the environment our area?
+-   **Species movement under changing climates:** How are species likely to move as the climate changes?
+
+## **Major Project:** Sea Surface Temperature Change and Marine Heatwaves
+
+For the last three years I have led the analysis and data-visualization efforts for [the Gulf of Maine Research Institute](https://www.gmri.org)'s cross-org communication effort: [The Gulf of Maine Warming Reports](https://www.gmri.org/stories/warming-22/).
+
+This collaborative project produces series of quarterly reports tracking sea surface temperature changes in our region, one of the fastest warming locations on Earth. The aim of this science-communication endeavor has been to raise awareness of changes in the regional ocean climate.
+
+The coastal communities of New England and Canada (past and present) have rich cultural histories entwined with the local ecology. This work shines a light on how observed changes in the environment may influence marine species and the communities they support.
+
+On my github you can find the code I use to maintain the processing steps for the [OISSTv2 satellite SST data pipelines](www.github.com/adamkemberling/oisst_mainstays).
+
+## **How I Work:** Collaborative Work with Open-Science
+
+Open-source programming languages (R & python) and their associated toolchains are instrumental for modern research. I employ these tools in my daily work (and in designing this website), and I am a stuanch believer in the open-science culture that has developed around their adoption in research. I am an open-science advocate, and I participating in projects where code-sharing and collaboration is encouraged. I am always looking to learn and collaborate with others and get involved with initiatives for social and environmental good. For those looking to connect you can reach me and find my work on [github](https://www.github.com/adamkemberling).

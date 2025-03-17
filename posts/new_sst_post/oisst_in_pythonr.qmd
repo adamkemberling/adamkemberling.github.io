@@ -20,21 +20,35 @@ gmRi::use_gmri_style_rmd(css_file = "gmri_rmarkdown.css")
 
 ```
 
+
+
 # SST Access via ERDDAP in python & R
 
-Much of the work I've done involves relating marine species to their preferred environments. One of the aspects of the environment I've studied the most
+Much of the work I've done involves relating marine species to their preferred environments. One of the aspects of the environment I've studied the most is seasonal variability in sea surface temperatures.
 
-## Why R & python
 
-I believe its important both to use the tools that best suit your interests and skills. However; I also believe it is important to be aware of what other avenues might exist. This workflow takes advantage of an environmental data distribution tool known as ERDDAP. This framework has API's that interface with both python & R and I wanted to highlight how similar these interfaces R for researchers who might be looking for an example to show the paralells across the two languages.
+### R & python: Suiting Tools to Your* Needs
 
-### Accessing SST ovia ERDDAP
+The expanding capacities of popular programming languages make it possible to accomplish most tasks without a strict need for developing skills in a second/third language or for switching between them within projects. With any project, the decisions around appropriate tools will ultimately boil down to some blend the project needs and the skills of the team. In most cases it will be more expedient to simply check whether some needs (ex. GIS and mapping) can be solved by existing packages in the preferred language before chasing a new feature showcased in another language.
+
+I also believe it is important to maintain an awareness of what other avenues might exist. Similar tasks may have a variety of solutions, and nuances between how different libraries approach these tasks can make a big difference in performance as well as developer experience in using the tools. 
+
+
+### 
+
+
+
+This workflow takes advantage of an environmental data distribution tool known as ERDDAP. This framework has API's that interface with both python & R and I wanted to highlight how similar these interfaces R for researchers who might be looking for an example to show the paralells across the two languages.
+
+### Accessing SST via ERDDAP
 
 In this demo we will be using a data product made available by NOAA known as Optimally Interpolated Sea Surface Temperature or OISST. This resource contains global sea surface temperatures dating back to September of 1981.
 
 #### ERDDAP Access Tools
 
-The two main steps to accessing SST data, and other resources on ERDDAP are: 1. Locating the ERDDAP server and data resource 2. Using an api tool like [rerddap](https://github.com/ropensci/rerddap) or [erdappy](https://github.com/ioos/erddapy) to generate URL's for ERDDAP
+The two main steps to accessing SST data, and other resources on ERDDAP are: 
+  1. Locating the ERDDAP server and data resource 
+  2. Using an api tool like [rerddap](https://github.com/ropensci/rerddap) or [erdappy](https://github.com/ioos/erddapy) to generate URL's for ERDDAP
 
 ```{r}
 #| echo: false

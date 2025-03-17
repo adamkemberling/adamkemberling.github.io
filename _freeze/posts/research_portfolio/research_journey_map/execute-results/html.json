@@ -1,0 +1,17 @@
+{
+  "hash": "ac6330a9a6eaec44b22eb6ab9dbbc2a5",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"My Research Journey\"\nauthor: \"Adam A. Kemberling\"\ndate: \"2024-06-07\"\n\ncategories: ['GIS', 'Hello-World', 'r']\ndescription: 'This is a brief mapping-related blog post, showing how to map out my research career journey.'\nexecute: \n  message: false\n  warning: false\n  echo: true\n  fig.align: \"center\"\n---\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(tidyverse)\nlibrary(sf)\nlibrary(gmRi)\n\n\n# Following along here\n# https://www.findingyourway.io/blog/2018/02/28/2018-02-28_great-circles-with-sf-and-leaflet/\n\n\nraw_journey_data <- tribble(\n  ~start.long, ~start.lat, ~end.long, ~end.lat, ~name,\n       \n  -76.478645, 39.604256, -77.878035, 34.226766, \"Jarrettsville to Wilmington\",\n  -77.878035, 34.226766, -83.527100, 10.593577, \"Wilmington to Costa Rica\",\n  -83.527100, 10.593577, -90.801365, 29.795008, \"Costa Rica to Thibodaux\",\n  -90.801365, 29.795008, -88.797574, 30.393609, \"Thibodaux to Ocean Springs\",\n  -88.797574, 30.393609, -88.561524, 30.365844, \"Ocean Springs to Pascagoula\",\n  -88.561524, 30.365844, -70.255992, 43.651484, \"Pascagoula to Portland\",\n)\n\n# Change to sf\nstart_locs <- raw_journey_data %>%\n  select(\n    start.long,\n    start.lat\n  ) %>%\n  setNames(c(\"long\", \"lat\")) %>%\n  mutate(journey_id = row_number())\n\nend_locs <- raw_journey_data %>%\n  select(\n    end.long,\n    end.lat\n  ) %>%\n  setNames(c(\"long\", \"lat\")) %>%\n  mutate(journey_id = row_number())\n\n# Make linestrings from the start/end coordinates\njourney_data_linestrings <- start_locs %>%\n  bind_rows(end_locs) %>%\n  st_as_sf(coords = c(\"long\", \"lat\")) %>%\n  group_by(journey_id) %>%\n  arrange(journey_id) %>%\n  summarise() %>%\n  st_cast(\"LINESTRING\")\n\njourney_data_linestrings <- st_set_crs(journey_data_linestrings, st_crs(4326))\n\njourney_data <- raw_journey_data\nst_geometry(journey_data) <- st_geometry(journey_data_linestrings)\n\n\n\n# Convert linestrings to matrices, then lists\nlist_of_linestrings <- raw_journey_data %>%\n  select(-name) %>%\n  transpose() %>%\n  map(~ matrix(flatten_dbl(.), nrow = 2, byrow = TRUE)) %>%\n  map(st_linestring)\n\n\n# collect the features\ncollection_sf <- list_of_linestrings %>%\n  st_sfc(crs = 4326) %>%\n  st_sf(geometry = .) \n\n# Bind to the raw\ncollection_sf <- collection_sf %>% \n  bind_cols(raw_journey_data) %>%\n  st_segmentize(units::set_units(50, km)) \n\n\nlibrary(rnaturalearth)\nworld_sf <- ne_countries(\"medium\", returnclass = \"sf\")\n\n# Map\nggplot() + \n  geom_sf(data = world_sf) +\n  geom_sf(data = collection_sf, aes(color = name),\n          linewidth = 1) +\n  coord_sf(xlim = c(-95, -65), ylim = c(10, 45))\n```\n\n::: {.cell-output-display}\n![](research_journey_map_files/figure-html/unnamed-chunk-1-1.png){width=672}\n:::\n:::\n",
+    "supporting": [
+      "research_journey_map_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

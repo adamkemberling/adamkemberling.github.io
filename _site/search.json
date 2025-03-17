@@ -1,10 +1,38 @@
 [
   {
-    "objectID": "posts/new_sst_post/oisst_in_pythonr.html#why-r-python",
-    "href": "posts/new_sst_post/oisst_in_pythonr.html#why-r-python",
-    "title": "OISST Access in Python & R",
-    "section": "Why R & python",
-    "text": "Why R & python\nI believe its important both to use the tools that best suit your interests and skills. However; I also believe it is important to be aware of what other avenues might exist. This workflow takes advantage of an environmental data distribution tool known as ERDDAP. This framework has API’s that interface with both python & R and I wanted to highlight how similar these interfaces R for researchers who might be looking for an example to show the paralells across the two languages.\n\nAccessing SST ovia ERDDAP\nIn this demo we will be using a data product made available by NOAA known as Optimally Interpolated Sea Surface Temperature or OISST. This resource contains global sea surface temperatures dating back to September of 1981.\n\nERDDAP Access Tools\nThe two main steps to accessing SST data, and other resources on ERDDAP are: 1. Locating the ERDDAP server and data resource 2. Using an api tool like rerddap or erdappy to generate URL’s for ERDDAP\n\n\n\n\n\n\n \n\n\n\n\n\n\n\nA work by Adam A. Kemberling\nAkemberling@gmri.org"
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Gulf of Maine Warming Blog Series",
+    "section": "",
+    "text": "My Research Journey\n\n\n\n\n\n\nGIS\n\n\nHello-World\n\n\nr\n\n\n\nThis is a brief mapping-related blog post, showing how to map out my research career journey.\n\n\n\n\n\nJun 7, 2024\n\n\nAdam A. Kemberling\n\n\n\n\n\n\n\n\n\n\n\n\nOISST Access in Python & R\n\n\n\n\n\n\nremote sensing\n\n\nSea surface temperatures\n\n\npython\n\n\nr\n\n\n\nThis is my first blog post, showing how to access SST data globally in R & python.\n\n\n\n\n\nAug 24, 2022\n\n\nAdam A. Kemberling\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nhello world\n\n\n\n\n\n\n\n\n\nAug 23, 2022\n\n\nAdam A. Kemberling\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Adam A. Kemberling",
+    "section": "",
+    "text": "Thank you for taking the time to visit my personal site!\nThis site is a means for me to share some of the projects that have been impactful to my development as a professional data-scientist and as a person.\nI am a data scientist and marine ecology researcher located in Portland, ME where I work as a researcher studying topics in Marine Ecology. Over my short career I have had the great fortune to work with some dynamic research teams, and across a range of beautifuly complex habitats and interesting research topics.\nI hope to share some of the most interesting lessons, tips and tricks, and challenges I’ve encountered along the way.\nCheers!"
+  },
+  {
+    "objectID": "index.html#recent-focus-ecological-responses-to-ocean-warming",
+    "href": "index.html#recent-focus-ecological-responses-to-ocean-warming",
+    "title": "Adam A. Kemberling",
+    "section": "Recent Focus: Ecological Responses to Ocean Warming",
+    "text": "Recent Focus: Ecological Responses to Ocean Warming\nMy research in New England has centered on how marine species and their ecological communities are responding to rapid ocean warming. Due in-part to shifts in major adjacent ocean currents, sea surface temperatures along the Northeast US & Nova Scotian continental shelf have been warming faster than most locations on Earth. This rapid-warming has attracted the attention of researchers like myself, who wish to increase the understanding of how ecosystems respond to a changing environment.\n\nMajor Themes:\nIn my role as a research associate, I’ve been closely involved in a number of research projects studying single-species and multi-species ecological community responses to ocean warming, and following changes along a number of dimensions.\n\nChanging community structure: Has the network of familiar species changed?\nChanging population dynamics: Are populations increasing/decreasing?\nChanging population size structure: Are we seeing smaller individuals of this species?\nProjected climate change impacts: What do different Shared Socio-Economic Pathways Project for the environment our area?\nSpecies movement under changing climates: How are species likely to move as the climate changes?"
+  },
+  {
+    "objectID": "index.html#major-project-sea-surface-temperature-change-and-marine-heatwaves",
+    "href": "index.html#major-project-sea-surface-temperature-change-and-marine-heatwaves",
+    "title": "Adam A. Kemberling",
+    "section": "Major Project: Sea Surface Temperature Change and Marine Heatwaves",
+    "text": "Major Project: Sea Surface Temperature Change and Marine Heatwaves\nFor the last three years I have led the analysis and data-visualization efforts for the Gulf of Maine Research Institute’s cross-org communication effort: The Gulf of Maine Warming Reports.\nThis collaborative project produces series of quarterly reports tracking sea surface temperature changes in our region, one of the fastest warming locations on Earth. The aim of this science-communication endeavor has been to raise awareness of changes in the regional ocean climate.\nThe coastal communities of New England and Canada (past and present) have rich cultural histories entwined with the local ecology. This work shines a light on how observed changes in the environment may influence marine species and the communities they support.\nOn my github you can find the code I use to maintain the processing steps for the OISSTv2 satellite SST data pipelines."
+  },
+  {
+    "objectID": "index.html#how-i-work-collaborative-work-with-open-science",
+    "href": "index.html#how-i-work-collaborative-work-with-open-science",
+    "title": "Adam A. Kemberling",
+    "section": "How I Work: Collaborative Work with Open-Science",
+    "text": "How I Work: Collaborative Work with Open-Science\nOpen-source programming languages (R & python) and their associated toolchains are instrumental for modern research. I employ these tools in my daily work (and in designing this website), and I am a stuanch believer in the open-science culture that has developed around their adoption in research. I am an open-science advocate, and I participating in projects where code-sharing and collaboration is encouraged. I am always looking to learn and collaborate with others and get involved with initiatives for social and environmental good. For those looking to connect you can reach me and find my work on github."
   },
   {
     "objectID": "posts/welcome/welcome_post.html",
@@ -21,11 +49,18 @@
     "text": "Why am I doing this?\nI’ve learned a ton about R and python from my peers. I see this as an opportunity to give back to the open-source community that has shaped my career.\n\n\n\n\n\n\n \n\n\n\n\n\n\n\nA work by Adam A. Kemberling\nAkemberling@gmri.org"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Adam A. Kemberling",
+    "objectID": "posts/new_sst_post/oisst_in_pythonr.html#why-r-python",
+    "href": "posts/new_sst_post/oisst_in_pythonr.html#why-r-python",
+    "title": "OISST Access in Python & R",
+    "section": "Why R & python",
+    "text": "Why R & python\nI believe its important both to use the tools that best suit your interests and skills. However; I also believe it is important to be aware of what other avenues might exist. This workflow takes advantage of an environmental data distribution tool known as ERDDAP. This framework has API’s that interface with both python & R and I wanted to highlight how similar these interfaces R for researchers who might be looking for an example to show the paralells across the two languages.\n\nAccessing SST ovia ERDDAP\nIn this demo we will be using a data product made available by NOAA known as Optimally Interpolated Sea Surface Temperature or OISST. This resource contains global sea surface temperatures dating back to September of 1981.\n\nERDDAP Access Tools\nThe two main steps to accessing SST data, and other resources on ERDDAP are: 1. Locating the ERDDAP server and data resource 2. Using an api tool like rerddap or erdappy to generate URL’s for ERDDAP\n\n\n\n\n\n\n \n\n\n\n\n\n\n\nA work by Adam A. Kemberling\nAkemberling@gmri.org"
+  },
+  {
+    "objectID": "posts/research_portfolio/research_journey_map.html",
+    "href": "posts/research_portfolio/research_journey_map.html",
+    "title": "My Research Journey",
     "section": "",
-    "text": "About me:\nI am a data scientist and marine researcher located in Portland, ME. My work currently centers on ecological responses to ocean warming, and I’ve been studying these responses through multi-species studies of both plankton and fish communities of the Northeastern US. I also lead the Gulf of Maine Warming Reports, including management of their remote-sensing data pipelines. These are efforts to raise awareness of cliamte change related impacts on the ocean environment through science communication.\nI am an open science advocate, and I enjoy participating in projects where code-sharing and collaboration is encouraged. I am always looking to learn and collaborate with others and get involved with initiatives for social good. For those looking to connect you can reach me and find my work on github.\nCheers!"
+    "text": "library(tidyverse)\nlibrary(sf)\nlibrary(gmRi)\n\n\n# Following along here\n# https://www.findingyourway.io/blog/2018/02/28/2018-02-28_great-circles-with-sf-and-leaflet/\n\n\nraw_journey_data &lt;- tribble(\n  ~start.long, ~start.lat, ~end.long, ~end.lat, ~name,\n       \n  -76.478645, 39.604256, -77.878035, 34.226766, \"Jarrettsville to Wilmington\",\n  -77.878035, 34.226766, -83.527100, 10.593577, \"Wilmington to Costa Rica\",\n  -83.527100, 10.593577, -90.801365, 29.795008, \"Costa Rica to Thibodaux\",\n  -90.801365, 29.795008, -88.797574, 30.393609, \"Thibodaux to Ocean Springs\",\n  -88.797574, 30.393609, -88.561524, 30.365844, \"Ocean Springs to Pascagoula\",\n  -88.561524, 30.365844, -70.255992, 43.651484, \"Pascagoula to Portland\",\n)\n\n# Change to sf\nstart_locs &lt;- raw_journey_data %&gt;%\n  select(\n    start.long,\n    start.lat\n  ) %&gt;%\n  setNames(c(\"long\", \"lat\")) %&gt;%\n  mutate(journey_id = row_number())\n\nend_locs &lt;- raw_journey_data %&gt;%\n  select(\n    end.long,\n    end.lat\n  ) %&gt;%\n  setNames(c(\"long\", \"lat\")) %&gt;%\n  mutate(journey_id = row_number())\n\n# Make linestrings from the start/end coordinates\njourney_data_linestrings &lt;- start_locs %&gt;%\n  bind_rows(end_locs) %&gt;%\n  st_as_sf(coords = c(\"long\", \"lat\")) %&gt;%\n  group_by(journey_id) %&gt;%\n  arrange(journey_id) %&gt;%\n  summarise() %&gt;%\n  st_cast(\"LINESTRING\")\n\njourney_data_linestrings &lt;- st_set_crs(journey_data_linestrings, st_crs(4326))\n\njourney_data &lt;- raw_journey_data\nst_geometry(journey_data) &lt;- st_geometry(journey_data_linestrings)\n\n\n\n# Convert linestrings to matrices, then lists\nlist_of_linestrings &lt;- raw_journey_data %&gt;%\n  select(-name) %&gt;%\n  transpose() %&gt;%\n  map(~ matrix(flatten_dbl(.), nrow = 2, byrow = TRUE)) %&gt;%\n  map(st_linestring)\n\n\n# collect the features\ncollection_sf &lt;- list_of_linestrings %&gt;%\n  st_sfc(crs = 4326) %&gt;%\n  st_sf(geometry = .) \n\n# Bind to the raw\ncollection_sf &lt;- collection_sf %&gt;% \n  bind_cols(raw_journey_data) %&gt;%\n  st_segmentize(units::set_units(50, km)) \n\n\nlibrary(rnaturalearth)\nworld_sf &lt;- ne_countries(\"medium\", returnclass = \"sf\")\n\n# Map\nggplot() + \n  geom_sf(data = world_sf) +\n  geom_sf(data = collection_sf, aes(color = name),\n          linewidth = 1) +\n  coord_sf(xlim = c(-95, -65), ylim = c(10, 45))"
   },
   {
     "objectID": "about.html",
@@ -33,12 +68,5 @@
     "title": "About the Site",
     "section": "",
     "text": "Why am I doing this?\nThis site is for sharing my professional portfolio in a more detailed way, as well as for sharing some of the research and programming tricks that I’ve found useful in my career. I plan to share quick tutorials on ocean warming and marine ecology workflows, interspersed between pictures of my dog and my scattered thoughts about a career studying climate change.\nMy hope is that through these posts I can help early researchers find tips for some common workflow challenges, and raise awareness of how modern research and data science intersect. Learning to program in R/python has been an empowering experience for me, and allowed me to make things that I can be proud of, and tackle challenges I otherwise would have shyed away from .In the open-source spirit I wish to give back to the community so that others can share that experience… But also dog pictures too."
-  },
-  {
-    "objectID": "blog.html",
-    "href": "blog.html",
-    "title": "Gulf of Maine Warming Blog Series",
-    "section": "",
-    "text": "OISST Access in Python & R\n\n\n\n\n\n\n\nremote sensing\n\n\nSea surface temperatures\n\n\npython\n\n\nr\n\n\n\n\nThis is my first blog post, showing how to access SST data globally in R & python.\n\n\n\n\n\n\nAug 24, 2022\n\n\nAdam A. Kemberling\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nhello world\n\n\n\n\n\n\n\n\n\n\n\nAug 23, 2022\n\n\nAdam A. Kemberling\n\n\n\n\n\n\nNo matching items"
   }
 ]
