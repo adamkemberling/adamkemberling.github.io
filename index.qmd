@@ -20,7 +20,7 @@ about:
 
 Thank you for taking the time to visit my personal site!
 
-Professionally speaking, I am a data scientist and marine science researcher located in Portland, ME where I study changes in species distribution and demographics. Over my short career I have had tremendous fortune to work with some dynamic research teams across a range of beautifuly complex habitats and interesting research topics.
+I am a data scientist and marine science researcher located in Portland, ME where I study changes in species distribution and demographics. Over my short career I have had tremendous fortune to work with some dynamic research teams across a range of beautifuly complex habitats and interesting research topics.
 
 My involvement/roles in these projects have shifted tremendously over my career. That journey thus far has seen a marked transition from early attempts at maximizing fieldwork, to more data-centric roles. I find myself more often leveraging the (near) decade of programming experiences to address big-data and statistical modeling questions.
 
@@ -30,7 +30,7 @@ This site is a means for me to share some of the projects that have been impactf
 
 Cheers!
 
-## Major Themes:
+## Major Research Themes:
 
 In my professional roles, I've been closely involved in a number of research projects studying single-species and multi-species ecological community responses to ocean warming. This work has followed ecological changes measured across a number of dimensions.
 
@@ -52,7 +52,9 @@ This collaborative project produces series of quarterly reports tracking sea sur
 
 The coastal communities of New England and Canada (past and present) have rich cultural histories entwined with the local ecology. This work shines a light on how observed changes in the environment may influence marine species and the communities they support.
 
-On my github you can find the code I use to maintain the processing steps for the [OISSTv2 satellite SST data pipelines](www.github.com/adamkemberling/oisst_mainstays).
+The code I use to maintain the sea surface temperature data processing pipeline for  tracking and reporting regional changes is available [on my github, in my oisst_mainstays repository](www.github.com/adamkemberling/oisst_mainstays). 
+
+Here you will find the python workflows I use for acquiring and processing climatologies, and the R quarto documents I use to compose quarterly summary reports.
 
 ## Major Project: Climate Change Scenarios for Northeast US
 
