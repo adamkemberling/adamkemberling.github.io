@@ -16,31 +16,33 @@ about:
       href: https://github.com/adamkemberling
 ---
 
-### Welcome!
+## Welcome!
 
 Thank you for taking the time to visit my personal site!
 
-This site is a means for me to share some of the projects that have been impactful to my development as a professional data-scientist and as a person.
+Professionally speaking, I am a data scientist and marine science researcher located in Portland, ME where I study changes in species distribution and demographics. Over my short career I have had tremendous fortune to work with some dynamic research teams across a range of beautifuly complex habitats and interesting research topics.
 
-I am a data scientist and marine ecology researcher located in Portland, ME where I work as a researcher studying topics in Marine Ecology. Over my short career I have had the great fortune to work with some dynamic research teams, and across a range of beautifuly complex habitats and interesting research topics.
+My involvement/roles in these projects have shifted tremendously over my career. That journey thus far has seen a marked transition from early attempts at maximizing fieldwork, to more data-centric roles. I find myself more often leveraging the (near) decade of programming experiences to address big-data and statistical modeling questions.
 
-I hope to share some of the most interesting lessons, tips and tricks, and challenges I've encountered along the way.
+On a more personal level, I am a lover of the outdoors and I enjoy taking the opportunities I have to spend time outdoors exploring Maine's coastal and more mountainous regions with my family. I more recently have taken up running as an exercise/hobby, and this has helped me clear my head and get me out to see a different side of the place I live.
+
+This site is a means for me to share some of the projects that have been impactful to my development as a professional data-scientist and as a person.It is my hope to share these experiences and highlight what I feel were some of the most interesting lessons, tips and tricks, and challenges encountered along the way.
 
 Cheers!
 
-## **Recent Focus:** Ecological Responses to Ocean Warming
+## Major Themes:
 
-My research in New England has centered on how marine species and their ecological communities are responding to rapid ocean warming. Due in-part to shifts in major adjacent ocean currents, sea surface temperatures along the Northeast US & Nova Scotian continental shelf have been warming faster than most locations on Earth. This rapid-warming has attracted the attention of researchers like myself, who wish to increase the understanding of how ecosystems respond to a changing environment.
-
-### Major Themes:
-
-In my role as a research associate, I've been closely involved in a number of research projects studying single-species and multi-species ecological community responses to ocean warming, and following changes along a number of dimensions.
+In my professional roles, I've been closely involved in a number of research projects studying single-species and multi-species ecological community responses to ocean warming. This work has followed ecological changes measured across a number of dimensions.
 
 -   **Changing community structure:** Has the network of familiar species changed?
 -   **Changing population dynamics:** Are populations increasing/decreasing?
 -   **Changing population size structure:** Are we seeing smaller individuals of this species?
 -   **Projected climate change impacts:** What do different Shared Socio-Economic Pathways Project for the environment our area?
 -   **Species movement under changing climates:** How are species likely to move as the climate changes?
+
+## **Recent Focus:** Ecological Responses to Ocean Warming
+
+My research in New England has centered on how marine species and their ecological communities are responding to rapid ocean warming. Due in-part to shifts in major adjacent ocean currents, sea surface temperatures along the Northeast US & Nova Scotian continental shelf have been warming faster than most locations on Earth. This rapid-warming has attracted the attention of researchers, like myself, who wish to increase the understanding of how ecosystems respond to a changing environment.
 
 ## **Major Project:** Sea Surface Temperature Change and Marine Heatwaves
 
@@ -51,6 +53,8 @@ This collaborative project produces series of quarterly reports tracking sea sur
 The coastal communities of New England and Canada (past and present) have rich cultural histories entwined with the local ecology. This work shines a light on how observed changes in the environment may influence marine species and the communities they support.
 
 On my github you can find the code I use to maintain the processing steps for the [OISSTv2 satellite SST data pipelines](www.github.com/adamkemberling/oisst_mainstays).
+
+## Major Project: Climate Change Scenarios for Northeast US
 
 ## **How I Work:** Collaborative Work with Open-Science
 
