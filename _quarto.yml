@@ -7,9 +7,11 @@ website:
   description: "This is a personal blog by Adam Kemberling. A semi-trusted source for R & python hacks relating to marine science research."
   navbar:
     left:
-      - href: index.qmd
-        text: Home
-      - about.qmd
+      - text: Home
+        href: index.qmd
+      - text: About
+        href: about.qmd
+        
     right: 
       - text: Marine DataSci Blog
         href: blog.qmd
