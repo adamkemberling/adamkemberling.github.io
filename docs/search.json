@@ -46,7 +46,7 @@
     "href": "index.html#major-project-climate-change-scenarios-for-northeast-us",
     "title": "Adam A. Kemberling",
     "section": "Major Project: Climate Change Scenarios for Northeast US",
-    "text": "Major Project: Climate Change Scenarios for Northeast US"
+    "text": "Major Project: Climate Change Scenarios for Northeast US\nThe resilience of social and ecological systems to projected climate change scenarios is a major research effort. Our lab at [GMRI](https://www.gmri.org) has assembled ensemble datasets for two shared socio-economic pathways, which project ocean conditions forward through 2100.\nThese ensemble datasets were statistically downscaled and seasonally bias-corrected using satellite ocean observation datasets and ocean reanalysis models. The following figure displays how actual sea surface temperatures (black) compare to the ensemble mean SST & uncertainty from the SSP5-8.5 ensemble we’ve prepared."
   },
   {
     "objectID": "index.html#how-i-work-collaborative-work-with-open-science",

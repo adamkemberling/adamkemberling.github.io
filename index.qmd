@@ -1,7 +1,7 @@
 ---
 title: "Adam A. Kemberling"
 description: "Personal website, portfolio, and blog of Adam A. Kemberling"
-image: profile.jpeg
+image: images/profile.jpeg
 about:
   template: jolla
   links:
@@ -52,11 +52,17 @@ This collaborative project produces series of quarterly reports tracking sea sur
 
 The coastal communities of New England and Canada (past and present) have rich cultural histories entwined with the local ecology. This work shines a light on how observed changes in the environment may influence marine species and the communities they support.
 
-The code I use to maintain the sea surface temperature data processing pipeline for  tracking and reporting regional changes is available [on my github, in my oisst_mainstays repository](www.github.com/adamkemberling/oisst_mainstays). 
+The code I use to maintain the sea surface temperature data processing pipeline for tracking and reporting regional changes is available [on my github, in my oisst_mainstays repository](www.github.com/adamkemberling/oisst_mainstays).
 
 Here you will find the python workflows I use for acquiring and processing climatologies, and the R quarto documents I use to compose quarterly summary reports.
 
 ## Major Project: Climate Change Scenarios for Northeast US
+
+The resilience of social and ecological systems to projected climate change scenarios is a major research effort. Our lab at \[GMRI\](https://www.gmri.org) has assembled ensemble datasets for two shared socio-economic pathways, which project ocean conditions forward through 2100.
+
+These ensemble datasets were statistically downscaled and seasonally bias-corrected using satellite ocean observation datasets and ocean reanalysis models. The following figure displays how actual sea surface temperatures (black) compare to the ensemble mean SST & uncertainty from the SSP5-8.5 ensemble we've prepared.
+
+![](images/NortheastUS_Scenario_vs_Obs_sst.png)
 
 ## **How I Work:** Collaborative Work with Open-Science
 
